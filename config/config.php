@@ -35,6 +35,10 @@
     define('JS_URL', PUBLIC_URL . 'js/');
     define('IMAGES_URL', PUBLIC_URL . 'images/');
 
+    define('ADMIN_PATH', PATH . 'admin/');
+    define('DASHBOARD_URL', SITE . 'admin/dashboard/');
+    define('USERS_URL', SITE . 'admin/users/');
+
     require("Db.php");
     require("CRUD.php");
 
@@ -57,6 +61,12 @@
             header('Location: ' . SITE . 'admin/dashboard.php');
             die();
         }
+    }
+
+    function pr($obj) {
+        echo 'Data:<pre>';
+        print_r($obj);
+        die();
     }
     
 
